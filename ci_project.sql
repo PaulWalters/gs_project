@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: May 06, 2014 at 07:35 PM
+-- Generation Time: May 07, 2014 at 01:34 PM
 -- Server version: 5.6.12-log
 -- PHP Version: 5.4.12
 
@@ -19,6 +19,30 @@ SET time_zone = "+00:00";
 --
 -- Database: `ci_project`
 --
+CREATE DATABASE IF NOT EXISTS `ci_project` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+USE `ci_project`;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `messages`
+--
+
+CREATE TABLE IF NOT EXISTS `messages` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(100) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `message` text NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+
+--
+-- Dumping data for table `messages`
+--
+
+INSERT INTO `messages` (`id`, `name`, `email`, `message`) VALUES
+(1, 'Paul', 'Paul.P.Walters@gmail.com', 'Testing form submit.'),
+(2, 'Paul', 'Paul.P.Walters@gmail.com', 'Testing email send and form submit.');
 
 -- --------------------------------------------------------
 
